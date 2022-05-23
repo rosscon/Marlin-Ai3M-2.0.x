@@ -153,13 +153,13 @@
 
 // This defines the number of extruders
 // :[1, 2, 3, 4, 5, 6, 7, 8]
-#define EXTRUDERS 1
+#define EXTRUDERS 5
 
 // Generally expected filament diameter (1.75, 2.85, 3.0, ...). Used for Volumetric, Filament Width Sensor, etc.
 #define DEFAULT_NOMINAL_FILAMENT_DIA 1.75
 
 // For Cyclops or any "multi-extruder" that shares a single nozzle.
-//#define SINGLENOZZLE
+#define SINGLENOZZLE
 
 /**
  * Průša MK2 Single Nozzle Multi-Material Multiplexer, and variants.
@@ -188,7 +188,7 @@
  *
  * For additional configuration see Configuration_adv.h
  */
-//#define PRUSA_MMU2
+#define PRUSA_MMU2
 
 // A dual extruder that uses a single stepper motor
 //#define SWITCHING_EXTRUDER
@@ -580,7 +580,7 @@
  * Note: For Bowden Extruders make this large enough to allow load/unload.
  */
 #define PREVENT_LENGTHY_EXTRUDE
-#define EXTRUDE_MAXLENGTH 600
+#define EXTRUDE_MAXLENGTH 1000
 
 //===========================================================================
 //======================== Thermal Runaway Protection =======================
@@ -1078,8 +1078,8 @@
 // @section extruder
 
 // For direct drive extruder v9 set to true, for geared extruder set to false.
-#define INVERT_E0_DIR true // set to false for stock drivers or TMC2208 with reversed connectors
-#define INVERT_E1_DIR true // set to false for stock drivers or TMC2208 with reversed connectors
+#define INVERT_E0_DIR false // set to false for stock drivers or TMC2208 with reversed connectors
+#define INVERT_E1_DIR false // set to false for stock drivers or TMC2208 with reversed connectors
 #define INVERT_E2_DIR false
 #define INVERT_E3_DIR false
 #define INVERT_E4_DIR false
@@ -1489,8 +1489,8 @@
 
 // Preheat Constants
 #define PREHEAT_1_LABEL       "PLA"
-#define PREHEAT_1_TEMP_HOTEND 200
-#define PREHEAT_1_TEMP_BED     50
+#define PREHEAT_1_TEMP_HOTEND 195
+#define PREHEAT_1_TEMP_BED     55
 #define PREHEAT_1_FAN_SPEED     0 // Value from 0 to 255
 
 #define PREHEAT_2_LABEL       "ABS"
@@ -1671,7 +1671,7 @@
  * you must uncomment the following option or it won't work.
  *
  */
-#define SDSUPPORT
+//#define SDSUPPORT
 
 /**
  * SD CARD: SPI SPEED
@@ -2283,6 +2283,6 @@
 //#define EDITABLE_SERVO_ANGLES
 
 // Enable Anycubic TFT
-#define ANYCUBIC_TFT_MODEL
-#define ANYCUBIC_FILAMENT_RUNOUT_SENSOR
-#define ANYCUBIC_TFT_DEBUG
+//#define ANYCUBIC_TFT_MODEL
+//#define ANYCUBIC_FILAMENT_RUNOUT_SENSOR
+//#define ANYCUBIC_TFT_DEBUG
